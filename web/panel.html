@@ -32,10 +32,10 @@
             <h5>PLAYERS REMAINING</h5>
             <h1 id="left-score">5</h1>
             <div class="flex">
-                <button onclick="leftScore(-1)">-1</button>
+                <button onclick="leftScore(-1)">-1 (Q)</button>
                 <button onclick="leftScore(1)">+1</button>
             </div>
-            <button onclick="leftCatch()">Caught Ball</button>
+            <button onclick="leftCatch()">Caught Ball (A)</button>
             </div>
 
             <div class="vflex section" style="width: 250px; height:300px;">
@@ -43,11 +43,13 @@
                 <h5>PLAYERS REMAINING</h5>
                 <h1 id="left-score">5</h1>
                 <div class="flex">
-                    <button onclick="rightScore(-1)">-1</button>
+                    <button onclick="rightScore(-1)">-1 (W)</button>
                     <button onclick="rightScore(1)">+1</button>
                 </div>
-                <button onclick="rightCatch()">Caught Ball</button>
+                <button onclick="rightCatch()">Caught Ball (S)</button>
                 </div>
+
+                
 
 
     <div style="width:533px; height: 300px; border:solid 4px #fff">
@@ -66,11 +68,68 @@
 
 </div>
 
-<div class="flex">
+<div class="flex" style="border:solid 2px #fff">
 <h4>Active Screen:</h4>
+<button class=screen onclick="screen(0)">BLACK (BS)</button>
+<button class=screen onclick="screen(1)">SCOREBOARD (1)</button>
+<button class=screen onclick="screen(2)">WIN SCREEN (2)</button>
+<button class=screen onclick="screen(3)">PRE MATCH (3)</button>
+<button class=screen onclick="screen(5)">TEST BARS (0)</button>
+<button class=screen onclick="screen(4)">CUSTOM IMG (4)</button>
+<input type="text" id="custom-input" style="width:175px; text-align: center;" placeholder="____.jpg">
 
 
 </div>
+
+
+<div class="flex" style="border:solid 2px #fff; justify-content:flex-start">
+<h4>LEFT TEAM:</h4>  
+<select style="width:250px; overflow: hidden" name="left-team" id="left-team">
+    <option class="left-team-option" value="0"></option>
+    <option class="left-team-option" value="1"></option>
+    <option class="left-team-option" value="2"></option>
+    <option class="left-team-option" value="3"></option>
+    <option class="left-team-option" value="4"></option>
+    <option class="left-team-option" value="5"></option>
+    <option class="left-team-option" value="6"></option>
+    <option class="left-team-option" value="7"></option>
+    <option class="left-team-option" value="8"></option>
+    <option class="left-team-option" value="9"></option>
+    <option class="left-team-option" value="10"></option>
+    <option class="left-team-option" value="11"></option>
+    <option class="left-team-option" value="12"></option>
+    <option class="left-team-option" value="13"></option>
+    <option class="left-team-option" value="14"></option>
+    <option class="left-team-option" value="15"></option>
+</select>
+<h4 style="margin-left:50px;">RIGHT TEAM:</h4>  
+<select style="width:250px; overflow: hidden" name="right-team" id="right-team">
+    <option class="right-team-option" value="0"></option>
+    <option class="right-team-option" value="1"></option>
+    <option class="right-team-option" value="2"></option>
+    <option class="right-team-option" value="3"></option>
+    <option class="right-team-option" value="4"></option>
+    <option class="right-team-option" value="5"></option>
+    <option class="right-team-option" value="6"></option>
+    <option class="right-team-option" value="7"></option>
+    <option class="right-team-option" value="8"></option>
+    <option class="right-team-option" value="9"></option>
+    <option class="right-team-option" value="10"></option>
+    <option class="right-team-option" value="11"></option>
+    <option class="right-team-option" value="12"></option>
+    <option class="right-team-option" value="13"></option>
+    <option class="right-team-option" value="14"></option>
+    <option class="right-team-option" value="15"></option>
+
+</select>
+
+
+<div class="flex"  style="margin-left:20px; width:470px;">
+<button id="bright"  class="active" onclick="bright()">FULL BRIGHTNESS (O)</button>
+<button id="dim"  onclick="dim()">DIM (P)</button>
+<input type="text" id="brightness-input" style="width:175px; text-align: center;" placeholder="DIM %" value="10">
+</div>
+    </div>
 
     </div>
 
