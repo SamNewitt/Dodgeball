@@ -145,3 +145,16 @@ function rightCatch(){
     }
     addLeftScore(-1);
 }
+
+
+//---------------------------------------------------------------------CURRENT SCREEN---------------------------------
+
+function screen(param){
+    if(param==4){
+        send("customImage="+e("custom-input").value)
+    }
+    
+    inactiveC("screen");
+    active("screen-"+param);
+    send("screen="+param);
+}
