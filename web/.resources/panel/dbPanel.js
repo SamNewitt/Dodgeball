@@ -107,3 +107,26 @@ function clockType(){
     e("clock-update").classList.add("update");
     e("clock-update").innerHTML="Update (Ent)";
 }
+
+
+
+//------------------------------------------------------------SCORING------------------------------------------------
+var leftScore=5,rightScore=5
+
+
+function addLeftScore(param){
+    if(leftScore+parseInt(param)>-1){
+        leftScore+=parseInt(param);
+        e("left-score").innerHTML=leftScore;
+        send("leftScore="+leftScore);
+        }
+}
+
+
+function addRightScore(param){
+    if(rightScore+parseInt(param)>-1){
+        rightScore+=parseInt(param);
+        e("right-score").innerHTML=rightScore;
+        send("rightScore="+rightScore);
+        }
+}
