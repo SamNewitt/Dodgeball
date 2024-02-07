@@ -15,15 +15,15 @@
 
 
     <div class="vflex section" style="width: 297px; height:300px;">
-        <h1 id="clock">12:00</h1>
+        <h1 id="clock">5:00</h1>
         <div class="flex">
             <button id=clock-start onclick="clockStart()">Start</button>
             <button id=clock-stop class="active" onclick="clockStop()">Stop</button>
         </div>
-        <button id=clock-reset onclick="clockStart()">Reset</button>
+        <button id=clock-reset onclick="clockReset()">Reset</button>
         <div class="flex" >
             <input type="text" id="clock-input" style="width:100px; text-align: center;" placeholder="MM:SS" oninput="clockType()">
-            <button id=clock-update onclick="clockUpdate()">Update</button>
+            <button id=clock-update onclick="clockUpdate()">Update (M)</button>
         </div>
         </div>
 
