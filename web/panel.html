@@ -11,13 +11,65 @@
 <body>
 
     <div id="container">
-<div class="flex" height="400px;">
+<div class="flex" height="300px;">
 
 
+    <div class="vflex section" style="width: 297px; height:300px;">
+        <h1 id="clock">12:00</h1>
+        <div class="flex">
+            <button id=clock-start onclick="clockStart()">Start</button>
+            <button id=clock-stop class="active" onclick="clockStop()">Stop</button>
+        </div>
+        <button id=clock-reset onclick="clockStart()">Reset</button>
+        <div class="flex" >
+            <input type="text" id="clock-input" style="width:100px; text-align: center;" placeholder="MM:SS" oninput="clockType()">
+            <button id=clock-update onclick="clockUpdate()">Update</button>
+        </div>
+        </div>
 
-    <div style="width:978px; height: 400px; border:solid 2px #fff">
-        <iframe src="display.html" scrolling="no" style="margin-left: -373.5px; margin-top: -210px; width: 1280px; height:720px; transform: scale(0.416);" frameborder="0"></iframe>
+        <div class="vflex section" style="width: 250px; height:300px;">
+            <h4>LEFT SIDE</h4>
+            <h5>PLAYERS REMAINING</h5>
+            <h1 id="left-score">5</h1>
+            <div class="flex">
+                <button onclick="leftScore(-1)">-1</button>
+                <button onclick="leftScore(1)">+1</button>
+            </div>
+            <button onclick="leftCatch()">Caught Ball</button>
+            </div>
+
+            <div class="vflex section" style="width: 250px; height:300px;">
+                <h4>RIGHT SIDE</h4>
+                <h5>PLAYERS REMAINING</h5>
+                <h1 id="left-score">5</h1>
+                <div class="flex">
+                    <button onclick="rightScore(-1)">-1</button>
+                    <button onclick="rightScore(1)">+1</button>
+                </div>
+                <button onclick="rightCatch()">Caught Ball</button>
+                </div>
+
+
+    <div style="width:533px; height: 300px; border:solid 4px #fff">
+        <iframe src="display.html" scrolling="no" style="margin-left: -373.5px; margin-top: -210px; width: 1280px; height:720px; background-color: #0f0; transform: scale(0.416);" frameborder="0"></iframe>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="flex">
+<h4>Active Screen:</h4>
+
+
 </div>
 
     </div>
