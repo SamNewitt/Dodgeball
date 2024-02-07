@@ -130,3 +130,18 @@ function addRightScore(param){
         send("rightScore="+rightScore);
         }
 }
+
+function leftCatch(){
+    if(leftScore<5){
+    addLeftScore(1);
+    }
+    addRightScore(-1);
+}
+
+function rightCatch(){
+    if(rightScore<5){
+        addRightScore(1);
+
+    }
+    addLeftScore(-1);
+}
