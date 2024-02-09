@@ -1,6 +1,9 @@
 <html>
 <head>
     <link rel="stylesheet" href=".resources/display/display.css">
+    <link rel="stylesheet" href=".resources/display/scoreboard.css">
+    <link rel="stylesheet" href=".resources/display/winScreen.css">
+    <link rel="stylesheet" href=".resources/display/matchup.css">
 
     <script src="https://kit.fontawesome.com/9ac7060263.js" crossorigin="anonymous"></script>
 </head>    
@@ -9,7 +12,37 @@
 
         <div id="container">
 
-<div style="height: 310px; width:640px; background-color: #0f0;"></div>
+            <div id=scoreboard>
+                <div id=clock-bg class=flex>
+                    <h1 id=clock>5:00</h1>
+                  </div>
+                  <div id=logo-bg>
+                    <img src=".resources/logo.jpg" alt="">
+                  </div>
+                  <div id=score class="flex gray">
+                    <div class=team-info style="border-right: solid 10px #fff">
+                      <h3 id=left-team-name>Team A Team A</h3>
+                      <div class="flex line-2">
+                        <h4 id=left-team-members>Steven Harmon<br>Steven Harmon<br>Steven Harmon<br>Steven Harmon <br>Steven harmon</h4>
+                        <h2 id=left-score>0</h2>
+                      </div>
+                    </div>
+              
+                    <div class=team-info>
+                      <h3 id=left-team-name>Team A Team A</h3>
+                      <div class="flex line-2">
+                        <h2 style="text-align:right" id=right-score>0</h2>
+                        <h4 id=left-team-members>Steven Harmon<br>Steven Harmon<br>Steven Harmon<br>Steven Harmon <br>Steven harmon</h4>
+              
+                      </div>
+                    </div>
+              
+                  </div>
+            </div>
+
+
+        <!-- WIN SCREEN -->
+
 
 
         </div>
