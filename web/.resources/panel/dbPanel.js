@@ -157,4 +157,18 @@ function screen(param){
     inactiveC("screen");
     active("screen-"+param);
     send("screen="+param);
+    send("leftTeam="+e("left-team").value);
+    send("rightTeam="+e("right-team").value);
+}
+
+function bright(){
+    inactive("dim");
+    active("bright");
+    send("brightness=100");
+}
+
+function dim(){
+    inactive("bright");
+    active("dim");
+    send("brightness="+e("brightness-input").value);
 }
