@@ -172,3 +172,16 @@ function dim(){
     active("dim");
     send("brightness="+e("brightness-input").value);
 }
+
+var leftSlots, rightSlots;
+leftSlots=document.getElementsByClassName("left-team-option");
+rightSlots=document.getElementsByClassName("right-team-option");
+
+function init(){
+    for(var i=0; i<jsonData.teams.length; i++){
+        leftSlots[i].innerHTML=jsonData.teams[i].name;
+        rightSlots[i].innerHTML=jsonData.teams[i].name;
+    }
+}
+
+init();
