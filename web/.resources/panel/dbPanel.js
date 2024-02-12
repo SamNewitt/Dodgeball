@@ -161,6 +161,13 @@ function screen(param){
     active("screen-"+param);
     send("leftTeam="+e("left-team").value);
     send("rightTeam="+e("right-team").value);
+    if(param==4){
+        send("customImage=welcome");
+    }
+    if(param==5){
+        send("customImage="+e("custom-input").value);
+        param=4;
+    }
     send("screen="+param);
    
 }

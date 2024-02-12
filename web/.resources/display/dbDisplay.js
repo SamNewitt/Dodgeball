@@ -32,13 +32,44 @@ function message(type,data){
         case "clockVal":
             clockSet(data);
         break;
+
+        case "customImage":
+            customImage(data);
+        break;
     }
 }
 
 
 
 
-function screen();
+function screen(param){
+    e("scoreboard").style.opacity="0";
+e("win-screen").style.opacity="0";
+e("matchup").style.opacity="0";
+e("custom-image").style.opacity="0";
+
+setTimeout(function(){
+switch(param){
+case 1:
+    e("scoreboard").style.opacity="1";
+break;
+
+case 2:
+    e("win-screen").style.opacity="1";
+break;
+
+case 3:
+    e("matchup").style.opacity="1";
+break;
+
+case 4:
+    e("custom-image").style.opacity="1";
+break;
+}
+
+},500);
+
+}
 
 
 
