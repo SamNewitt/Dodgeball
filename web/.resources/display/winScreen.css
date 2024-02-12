@@ -1,0 +1,42 @@
+#winner-bg {
+    height: 150px;
+    background-color: #000;
+    border-bottom: solid 10px #fff;
+    width: 1280px;
+  }
+  
+  #winner {
+    text-align: center;
+    font-family: "oswald", sans-serif;
+    font-size: 110px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  #win-screen-bg {
+    background-color: #a81436;
+    width: 1280px;
+    top: 185px;
+    height: 560px;
+  }
+  
+  #win-screen-names {
+    position: relative;
+    color: #ddd;
+    font-size: 60px;
+    top: 80px;
+    left: 700px;
+    text-align: center;
+    font-family: "roboto", sans-serif;
+    margin: 0;
+    line-height: 80px;
+    width:580px;
+  }
+
+  #win-screen-logo{
+    position: absolute;
+    top: 180px;
+    width: 900px;
+    left: -160;
+    opacity: 0.4;
+  }
