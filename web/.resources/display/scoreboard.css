@@ -3,7 +3,7 @@
 }
 
 #container > *{
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 
@@ -45,7 +45,7 @@
   
   .team-info {
     width: 640px;
-    background-color: #a81436;
+    background-color: a7001b;
   }
   
   .team-info h3 {

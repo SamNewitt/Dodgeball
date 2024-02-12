@@ -148,8 +148,12 @@ function rightCatch(){
 
 
 //---------------------------------------------------------------------CURRENT SCREEN---------------------------------
+var currentScreen=0;
 
 function screen(param){
+    if(param!=currentScreen || param==5)
+    {
+        currentScreen=param;
     if(param==5){
         send("customImage="+e("custom-input").value)
     }
@@ -169,7 +173,7 @@ function screen(param){
         param=4;
     }
     send("screen="+param);
-   
+}
 }
 
 function bright(){
