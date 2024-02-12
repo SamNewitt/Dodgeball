@@ -150,15 +150,19 @@ function rightCatch(){
 //---------------------------------------------------------------------CURRENT SCREEN---------------------------------
 
 function screen(param){
-    if(param==4){
+    if(param==5){
         send("customImage="+e("custom-input").value)
+    }
+    if(param==4){
+        send("customImage=welcome");
     }
     
     inactiveC("screen");
     active("screen-"+param);
-    send("screen="+param);
     send("leftTeam="+e("left-team").value);
     send("rightTeam="+e("right-team").value);
+    send("screen="+param);
+   
 }
 
 function bright(){

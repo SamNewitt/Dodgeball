@@ -1,3 +1,11 @@
+#container{
+  background-color: #000;
+}
+
+#container > *{
+  transition: 0.5s;
+}
+
 
 #clock-bg {
     height: 330px;
