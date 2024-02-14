@@ -161,6 +161,8 @@ function screen(param){
         send("customImage=welcome");
     }
     
+
+    
     inactiveC("screen");
     active("screen-"+param);
     if(param==1 || param==3){
