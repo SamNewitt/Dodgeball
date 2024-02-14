@@ -91,3 +91,16 @@ b, h1,img {
     opacity: 0;
   }
 }
+
+#brightness-cover{
+  transition:0.3s;
+  opacity:0;
+  width:1280px;
+  height:720px;
+  background-color: #000;
+}
+
+#custom-image{
+  width:1280px;
+  height:720px;
+}

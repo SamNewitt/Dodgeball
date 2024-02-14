@@ -81,7 +81,7 @@ case "2":
     else{
         e("winner").innerHTML+=" WINS"
     }
-    
+
     e("win-screen").style.opacity="1";
 break;
 
@@ -169,4 +169,13 @@ function setRightTeam(param){
     e("matchup-right-team").innerHTML=jsonData.teams[param].name;
     e("right-team-members").innerHTML=jsonData.teams[param].member1+"<br>"+jsonData.teams[param].member2+"<br>"+jsonData.teams[param].member3+"<br>"+jsonData.teams[param].member4+"<br>"+jsonData.teams[param].member5;
     e("matchup-right-names").innerHTML=jsonData.teams[param].member1+"<br>"+jsonData.teams[param].member2+"<br>"+jsonData.teams[param].member3+"<br>"+jsonData.teams[param].member4+"<br>"+jsonData.teams[param].member5;
+}
+
+
+function brightness(param){
+    e("brightness-cover").style.opacity=(100-param)/100;
+}
+
+function customImage(param){
+    e("custom-image").setAttribute("src","../customImages/"+param+".jpg")
 }
