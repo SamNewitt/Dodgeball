@@ -11,12 +11,12 @@ function message(type,data){
     break;
 
      case "leftScore":
-        leftScore(data);
+        setLeftScore(data);
     break; 
 
 
     case "rightScore":
-        rightScore(data);
+        setRightScore(data);
     break; 
 
     case "brightness":
@@ -108,4 +108,19 @@ else{
 clock=Math.trunc(clockRemain/60)+":"+clockRemain%60;
 }
 setHTML("clock",clock);
+}
+
+
+
+//---------------------------------------SORING
+var leftScore=5, rightScore=5;
+function setLeftScore(param){
+    leftScore=param;
+    e("left-score").innerHTML=param;
+}
+
+
+function setRightScore(param){
+    rightScore=param;
+    e("right-score").innerHTML=param;
 }
