@@ -65,6 +65,23 @@ case "1":
 break;
 
 case "2":
+    if(leftScore>rightScore){
+        e("winner").innerHTML=jsonData.teams[leftTeam].name;
+        e("win-screen-names").innerHTML=jsonData.teams[leftTeam].member1+"<br>"+jsonData.teams[leftTeam].member2+"<br>"+jsonData.teams[leftTeam].member3+"<br>"+jsonData.teams[leftTeam].member4+"<br>"+jsonData.teams[leftTeam].member5;
+    }
+    else{
+        e("winner").innerHTML=jsonData.teams[rightTeam].name;
+        e("win-screen-names").innerHTML=jsonData.teams[rightTeam].member1+"<br>"+jsonData.teams[rightTeam].member2+"<br>"+jsonData.teams[rightTeam].member3+"<br>"+jsonData.teams[rightTeam].member4+"<br>"+jsonData.teams[rightTeam].member5;
+ 
+    }
+
+    if(e("winner").innerHTML.charAt(e("winner").innerHTML.length-1)=="s"){
+        e("winner").innerHTML+=" WIN"
+    }
+    else{
+        e("winner").innerHTML+=" WINS"
+    }
+    
     e("win-screen").style.opacity="1";
 break;
 

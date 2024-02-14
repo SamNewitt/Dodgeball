@@ -163,8 +163,10 @@ function screen(param){
     
     inactiveC("screen");
     active("screen-"+param);
+    if(param==1 || param==3){
     send("leftTeam="+e("left-team").value);
     send("rightTeam="+e("right-team").value);
+    }
     if(param==4){
         send("customImage=welcome");
     }
