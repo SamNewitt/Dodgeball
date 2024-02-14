@@ -192,11 +192,9 @@ var leftSlots, rightSlots;
 leftSlots=document.getElementsByClassName("left-team-option");
 rightSlots=document.getElementsByClassName("right-team-option");
 
-function init(){
+function dbInit(){
     for(var i=0; i<jsonData.teams.length; i++){
         leftSlots[i].innerHTML=jsonData.teams[i].name;
         rightSlots[i].innerHTML=jsonData.teams[i].name;
     }
 }
-
-init();

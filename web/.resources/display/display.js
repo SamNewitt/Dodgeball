@@ -109,60 +109,7 @@ function enlargeAllImages() {
 
 
 function init(){
-    document.querySelector(':root').style.setProperty("--away-primary", jsonData.away.primaryColor);
-    document.querySelector(':root').style.setProperty("--home-primary", jsonData.home.primaryColor);
-    document.querySelector(':root').style.setProperty("--away-accent", jsonData.away.accentColor);
-    document.querySelector(':root').style.setProperty("--home-accent", jsonData.home.accentColor);
-    document.querySelector(':root').style.setProperty("--away-bg", jsonData.away.bgColor);
-    document.querySelector(':root').style.setProperty("--home-bg", jsonData.home.bgColor);
-
-
-c("away-name").forEach(function(elem){
-    elem.innerHTML=jsonData.away.name;
-});
-c("home-name").forEach(function(elem){
-    elem.innerHTML=jsonData.home.name;
-});
-
-c("away-seed").forEach(function(elem){
-    elem.innerHTML=jsonData.away.seed;
-});
-c("home-seed").forEach(function(elem){
-    elem.innerHTML=jsonData.home.seed;
-});
-
-c("away-record").forEach(function(elem){
-    elem.innerHTML="("+jsonData.away.record+")";
-});
-c("home-record").forEach(function(elem){
-    elem.innerHTML="("+jsonData.home.record+")";
-});
-
-c("away-abbr").forEach(function(elem){
-  elem.innerHTML=jsonData.away.abbriviation;
-});
-c("home-abbr").forEach(function(elem){
-  elem.innerHTML=jsonData.home.abbriviation;
-});
-
-// c("away-starters-title").forEach(function(elem){
-//     elem.innerHTML=jsonData.away.name+" Starters";
-// });
-// c("home-starters-title").forEach(function(elem){
-//     elem.innerHTML=jsonData.home.name+" Starters";
-// });
-
-c("away-logo").forEach(function(elem){
-    elem.setAttribute("src",jsonData.away.logo);
-});
-c("home-logo").forEach(function(elem){
-    elem.setAttribute("src",jsonData.home.logo);
-});
-tickerInit();
-l3rdInit();
-keysInit();
-giInit();
-setTimeout(enlargeAllImages,1000);
+ 
 }
 
 

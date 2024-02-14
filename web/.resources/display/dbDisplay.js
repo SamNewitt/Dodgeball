@@ -19,10 +19,6 @@ function message(type,data){
         setRightScore(data);
     break; 
 
-    case "brightness":
-        brightness(data);
-    break; 
-
     case "clockStart":
             clockStart();
         break;
@@ -35,6 +31,18 @@ function message(type,data){
 
         case "customImage":
             customImage(data);
+        break;
+        
+        case "brightness":
+            brightness(data);
+        break;
+
+        case "leftTeam":
+            setLeftTeam(data);
+        break;
+
+        case "rightTeam":
+            setRightTeam(data);
         break;
     }
 }
@@ -123,4 +131,25 @@ function setLeftScore(param){
 function setRightScore(param){
     rightScore=param;
     e("right-score").innerHTML=param;
+}
+
+
+var leftTeam=0; rightTeam=0;
+
+function setLeftTeam(param){
+    leftTeam=param;
+    e("left-team-name").innerHTML=jsonData.teams[param].name;
+    e("matchup-left-team").innerHTML=jsonData.teams[param].name;
+    e("left-team-members").innerHTML=jsonData.teams[param].member1+"<br>"+jsonData.teams[param].member2+"<br>"+jsonData.teams[param].member3+"<br>"+jsonData.teams[param].member4+"<br>"+jsonData.teams[param].member5;
+    e("matchup-left-names").innerHTML=jsonData.teams[param].member1+"<br>"+jsonData.teams[param].member2+"<br>"+jsonData.teams[param].member3+"<br>"+jsonData.teams[param].member4+"<br>"+jsonData.teams[param].member5;
+
+}
+
+
+function setRightTeam(param){
+    rightTeam=param;
+    e("right-team-name").innerHTML=jsonData.teams[param].name;
+    e("matchup-right-team").innerHTML=jsonData.teams[param].name;
+    e("right-team-members").innerHTML=jsonData.teams[param].member1+"<br>"+jsonData.teams[param].member2+"<br>"+jsonData.teams[param].member3+"<br>"+jsonData.teams[param].member4+"<br>"+jsonData.teams[param].member5;
+    e("matchup-right-names").innerHTML=jsonData.teams[param].member1+"<br>"+jsonData.teams[param].member2+"<br>"+jsonData.teams[param].member3+"<br>"+jsonData.teams[param].member4+"<br>"+jsonData.teams[param].member5;
 }

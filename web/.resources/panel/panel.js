@@ -40,28 +40,10 @@ return false;
 }
 
 function init(){
-
-    document.querySelector(':root').style.setProperty("--away-bg", jsonData.away.bgColor);
-    document.querySelector(':root').style.setProperty("--home-bg", jsonData.home.bgColor);
+dbInit();
 
 
 
-
-c("away-name").forEach(function(elem){
-    elem.innerHTML=jsonData.away.name;
-});
-c("home-name").forEach(function(elem){
-    elem.innerHTML=jsonData.home.name;
-});
-
-
-
-c("away-starters-title").forEach(function(elem){
-    elem.innerHTML=jsonData.away.name+" Starters";
-});
-c("home-starters-title").forEach(function(elem){
-    elem.innerHTML=jsonData.home.name+" Starters";
-});
 
 
 }
@@ -77,15 +59,17 @@ function serverConnect(){
             
 socket.addEventListener("open", function (event) {
 e("wait-cover").style.display="none";
-e("connection").innerHTML="CONNECTED"
-e("connection").style.backgroundColor="#008000";
+// e("connection").innerHTML="CONNECTED"
+// e("connection").style.backgroundColor="#008000";
+
+
 });
 
 
 socket.addEventListener("close", function (event) {
-e("wait-cover").style.display="none";
-e("connection").innerHTML="ERROR"
-e("connection").style.backgroundColor="#f00";
+e("wait-cover").style.display="block";
+// e("connection").innerHTML="ERROR"
+// e("connection").style.backgroundColor="#f00";
 setTimeout(function() {
     serverConnect();
   }, 1000);
@@ -97,7 +81,6 @@ msgData=event.data.split("=");
     case "broadcastFile":
     jsonData=JSON.parse(msgData[1]);
     init();
-    playersInit();
     break;
 }
 });
