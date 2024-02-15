@@ -1,0 +1,107 @@
+<html>
+<head>
+    <link rel="stylesheet" href=".resources/display/display.css">
+    <link rel="stylesheet" href=".resources/display/scoreboard.css">
+    <link rel="stylesheet" href=".resources/display/winScreen.css">
+    <link rel="stylesheet" href=".resources/display/matchup.css">
+
+    <script src="https://kit.fontawesome.com/9ac7060263.js" crossorigin="anonymous"></script>
+</head>    
+
+    <body>
+
+        <div id="container">
+
+            <div id=scoreboard>
+                <div id=clock-bg class=flex>
+                    <h1 id=clock>5:00</h1>
+                  </div>
+                  <div id=logo-bg>
+                    <img src=".resources/logo.jpg" alt="">
+                  </div>
+                  <div id=score class="flex gray">
+                    <div class=team-info style="border-right: solid 10px #fff">
+                      <h3 id=left-team-name></h3>
+                      <div class="flex line-2">
+                        <h4 id=left-team-members>fff</h4>
+                        <h2 id=left-score>5</h2>
+                      </div>
+                    </div>
+              
+                    <div class=team-info>
+                      <h3 id=right-team-name></h3>
+                      <div class="flex line-2">
+                        <h2 style="text-align:right" id=right-score>5</h2>
+                        <h4 id=right-team-members></h4>
+              
+                      </div>
+                    </div>
+              
+                  </div>
+            </div>
+
+
+        <!-- WIN SCREEN -->
+
+
+        <div id="win-screen">
+
+
+          <div id=winner-bg class=flex>
+            <h1 id=winner> Wins!</h1>
+      
+          </div>
+      
+          <div id=win-screen-bg>
+            <h3 id=win-screen-names>
+              
+            </h3>
+          </div>
+          <img src=".resources/rhs.png" alt="" id=win-screen-logo>
+
+
+
+        </div>
+
+
+
+
+        <!-- MATCHUP SCREEN -->
+<div id="matchup">
+  <div id="matchup-logo-container" class="flex">
+    <img src=".resources/logoWide.jpg" alt="" id="matchup-logo">
+  </div>
+ 
+
+  <div id=matchup-container class=flex>
+    <div class="matchup-team flex" style="border-right:solid 10px #fff;">
+      <h1 id=matchup-left-team></h1>
+      <h3 id=matchup-left-names>
+        
+      </h3>
+    </div>
+
+    <div class="matchup-team flex">
+      <h1 id=matchup-right-team></h1>
+      <h3 id=matchup-right-names>
+        
+      </h3>
+    </div>
+
+  </div>
+</div>
+
+
+<img src="" alt="" id="custom-image">
+
+<div id="brightness-cover"></div>
+        </div>
+
+        <div id="wait-cover" class="flex">
+            <h1 style="color: #000; font-family:sans-serif;">Attempting to connect to server...</h1>
+          </div>
+        <script src=".resources/display/display.js"></script>
+        <script src=".resources/display/dbDisplay.js"></script>
+
+    </body>
+</html>

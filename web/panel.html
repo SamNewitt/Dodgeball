@@ -1,0 +1,143 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href=".resources/panel/panel.css">
+    <script src=".resources/panel/panel.js"></script>
+    <script src=".resources/panel/dbPanel.js"></script>
+    <script src=".resources/panel/keybindings.js"></script>
+
+    <script src="https://kit.fontawesome.com/9ac7060263.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="container">
+<div class="flex" height="300px;">
+
+
+    <div class="vflex section" style="width: 297px; height:300px;">
+        <h1 id="clock">5:00</h1>
+        <div class="flex">
+            <button id=clock-start onclick="clockStart()">Start</button>
+            <button id=clock-stop class="active" onclick="clockStop()">Stop</button>
+        </div>
+        <button id=clock-reset onclick="clockReset()">Reset</button>
+        <div class="flex" >
+            <input type="text" id="clock-input" style="width:100px; text-align: center;" placeholder="MM:SS" oninput="clockType()">
+            <button id=clock-update onclick="clockUpdate()">Update (M)</button>
+        </div>
+        </div>
+
+        <div class="vflex section" style="width: 250px; height:300px;">
+            <h4>LEFT SIDE</h4>
+            <h5>PLAYERS REMAINING</h5>
+            <h1 id="left-score">5</h1>
+            <div class="flex">
+                <button onclick="addLeftScore(-1)">-1 (A)</button>
+                <button onclick="addLeftScore(1)">+1 (Q)</button>
+            </div>
+            <button onclick="leftCatch()">Caught Ball (Z)</button>
+            </div>
+
+            <div class="vflex section" style="width: 250px; height:300px;">
+                <h4>RIGHT SIDE</h4>
+                <h5>PLAYERS REMAINING</h5>
+                <h1 id="right-score">5</h1>
+                <div class="flex">
+                    <button onclick="addRightScore(-1)">-1 (S)</button>
+                    <button onclick="addRightScore(1)">+1 (W)</button>
+                </div>
+                <button onclick="rightCatch()">Caught Ball (X)</button>
+                </div>
+
+                
+
+
+    <div style="width:533px; height: 300px; border:solid 4px #fff">
+        <iframe src="display.html" scrolling="no" style="margin-left: -373.5px; margin-top: -210px; width: 1280px; height:720px; background-color: #0f0; transform: scale(0.416);" frameborder="0"></iframe>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="flex" style="border:solid 2px #fff">
+<h4>Active Screen:</h4>
+<button id=screen-0 class="active screen" onclick="screen(0)">BLACK (BS)</button>
+<button id=screen-1 class=screen onclick="screen(1)">SCOREBOARD (1)</button>
+<button id=screen-2 class=screen onclick="screen(2)">WIN SCREEN (2)</button>
+<button id=screen-3 class=screen onclick="screen(3)">PRE MATCH (3)</button>
+<button id=screen-4 class=screen onclick="screen(4)">WELCOME (4)</button>
+<button id=screen-5 class=screen onclick="screen(5)">CUSTOM IMG (5)</button>
+<input type="text" id="custom-input" style="width:175px; text-align: center;" placeholder="____.jpg">
+
+
+</div>
+
+
+<div class="flex" style="border:solid 2px #fff; justify-content:flex-start">
+<h4>LEFT TEAM:</h4>  
+<select style="width:250px; overflow: hidden" name="left-team" id="left-team">
+    <option class="left-team-option" value="0"></option>
+    <option class="left-team-option" value="1"></option>
+    <option class="left-team-option" value="2"></option>
+    <option class="left-team-option" value="3"></option>
+    <option class="left-team-option" value="4"></option>
+    <option class="left-team-option" value="5"></option>
+    <option class="left-team-option" value="6"></option>
+    <option class="left-team-option" value="7"></option>
+    <option class="left-team-option" value="8"></option>
+    <option class="left-team-option" value="9"></option>
+    <option class="left-team-option" value="10"></option>
+    <option class="left-team-option" value="11"></option>
+    <option class="left-team-option" value="12"></option>
+    <option class="left-team-option" value="13"></option>
+    <option class="left-team-option" value="14"></option>
+    <option class="left-team-option" value="15"></option>
+</select>
+<h4 style="margin-left:50px;">RIGHT TEAM:</h4>  
+<select style="width:250px; overflow: hidden" name="right-team" id="right-team">
+    <option class="right-team-option" value="0"></option>
+    <option class="right-team-option" value="1"></option>
+    <option class="right-team-option" value="2"></option>
+    <option class="right-team-option" value="3"></option>
+    <option class="right-team-option" value="4"></option>
+    <option class="right-team-option" value="5"></option>
+    <option class="right-team-option" value="6"></option>
+    <option class="right-team-option" value="7"></option>
+    <option class="right-team-option" value="8"></option>
+    <option class="right-team-option" value="9"></option>
+    <option class="right-team-option" value="10"></option>
+    <option class="right-team-option" value="11"></option>
+    <option class="right-team-option" value="12"></option>
+    <option class="right-team-option" value="13"></option>
+    <option class="right-team-option" value="14"></option>
+    <option class="right-team-option" value="15"></option>
+
+</select>
+
+
+<div class="flex"  style="margin-left:20px; width:470px;">
+<button id="bright"  class="active" onclick="bright()">FULL BRIGHTNESS (O)</button>
+<button id="dim"  onclick="dim()">DIM (P)</button>
+<input type="text" id="brightness-input" style="width:175px; text-align: center;" placeholder="DIM %" value="10">
+</div>
+    </div>
+
+    </div>
+
+
+
+    <div id="wait-cover" class="flex">
+        <h1 style="color: #000; font-family:sans-serif;">Attempting to connect to server...</h1>
+      </div>
+    
+</body>
+</html>
