@@ -79,10 +79,10 @@ case "2":
     }
 
     if(e("winner").innerHTML.charAt(e("winner").innerHTML.length-1)=="s"){
-        e("winner").innerHTML+=" WIN"
+        e("winner").innerHTML+=" WIN!"
     }
     else{
-        e("winner").innerHTML+=" WINS"
+        e("winner").innerHTML+=" WINS!"
     }
 
     e("win-screen").style.opacity="1";
