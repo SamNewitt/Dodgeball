@@ -106,7 +106,7 @@ break;
 
 
 
-var clockRemain=720, clock="12:00";
+var clockRemain=300, clock="5:00", clockInterval;
 
 function clockStart(){
     clockInterval = setInterval(function(){
@@ -117,7 +117,8 @@ function clockStart(){
         else{
         clock=Math.trunc(clockRemain/60)+":"+clockRemain%60;
         }
-setHTML("clock",clock);
+
+e("clock").innerHTML=clock;
 if(clockRemain==0)
 {
     clockStop();
@@ -137,7 +138,8 @@ if(clockRemain%60<10){
 else{
 clock=Math.trunc(clockRemain/60)+":"+clockRemain%60;
 }
-setHTML("clock",clock);
+e("clock").innerHTML=clock;
+
 }
 
 
@@ -188,6 +190,8 @@ function setRightTeam(param){
 function brightness(param){
     e("brightness-cover").style.opacity=(100-param)/100;
 }
+
+var customImage=0;
 
 function customImageUpdate(){
     e("custom-image").setAttribute("src","../customImages/"+customImage+".jpg")
