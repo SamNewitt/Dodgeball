@@ -38,11 +38,11 @@ function message(type,data){
         break;
 
         case "leftTeam":
-            setLeftTeam(data);
+            preLeftTeam(data);
         break;
 
         case "rightTeam":
-            setRightTeam(data);
+            preRightTeam(data);
         break;
     }
 }
@@ -57,6 +57,8 @@ e("matchup").style.opacity="0";
 e("custom-image").style.opacity="0";
 
 setTimeout(function(){
+    setLeftTeam(pendingLeftTeam);
+    setRightTeam(pendingRightTeam);
 switch(param){
     
 case "1":
@@ -87,6 +89,8 @@ break;
 
 case "3":
     e("matchup").style.opacity="1";
+    setRightScore(5);
+    setLeftScore(5);
 break;
 
 case "4":
@@ -151,7 +155,15 @@ function setRightScore(param){
 }
 
 
-var leftTeam=0; rightTeam=0;
+var leftTeam=0; rightTeam=0, pendingLeftTeam=0, pendingRightTeam=0;
+
+function preLeftTeam(param){
+    pendingLeftTeam=param;
+}
+
+function preRightTeam(param){
+    pendingRightTeam=param;
+}
 
 function setLeftTeam(param){
     leftTeam=param;

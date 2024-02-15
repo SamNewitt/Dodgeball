@@ -9,17 +9,68 @@
             "member5":"Peyton Pearson"
         },
         {
-            "name":"TeamBs",
-            "member1":"Steven 2",
-            "member2":"Steven 2",
-            "member3":"Steven 2",
-            "member4":"Steven 2",
-            "member5":"Steven 2"
+            "name":"Team Gaspar",
+            "member1":"Ryan",
+            "member2":"Owne",
+            "member3":"Ethan",
+            "member4":"Turner",
+            "member5":""
+        },
+        {
+            "name":"The Boomers",
+            "member1":"Jace Askey",
+            "member2":"Israel Brown",
+            "member3":"Bruke Yemen",
+            "member4":"Eugene Bowier",
+            "member5":"Danal Dean"
+        },
+        {
+            "name":"The Monkeys",
+            "member1":"Sam Markman",
+            "member2":"Austin Markman",
+            "member3":"Elijah Else",
+            "member4":"Jordan Cooper",
+            "member5":"Jackson Gardner"
+        },
+        {
+            "name":"Retired Athletes",
+            "member1":"Brock Ades",
+            "member2":"Amanuel Schmaus",
+            "member3":"Baron Martin",
+            "member4":"Matther Pich",
+            "member5":"Tyler Olson"
+        },
+        {
+            "name":"Carson Hoines Elite",
+            "member1":"Tucker DeHaan",
+            "member2":"Dondre Myott",
+            "member3":"Jack Hille",
+            "member4":"Carson Hoines",
+            "member5":"CJ Shmohs"
+        },
+        {
+            "name":"The Finishers",
+            "member1":"Mason Mundt",
+            "member2":"Landon French",
+            "member3":"Donald Arens",
+            "member4":"Steven Harmon",
+            "member5":"Nick Logue"
+        },
+        {
+            "name":"The Average Joe's",
+            "member1":"Kaleb Schroeder",
+            "member2":"Jaxson DeHaan",
+            "member3":"Adler Jensen",
+            "member4":"Lawsen Hensley",
+            "member5":"Logan Edwards"
+        },
+        {
+            "name":"The Liver Kings",
+            "member1":"Connor Fitzpatrick",
+            "member2":"Dru Stengle",
+            "member3":"Caden Gonnerman",
+            "member4":"Marko Mings",
+            "member5":"David Yusten"
         }
-
-
-
-
-
     ]
 }

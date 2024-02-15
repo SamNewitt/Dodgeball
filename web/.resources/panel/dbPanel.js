@@ -169,6 +169,12 @@ function screen(param){
     send("leftTeam="+e("left-team").value);
     send("rightTeam="+e("right-team").value);
     }
+    if(param==3){
+        leftScore=5;
+        e("left-score").innerHTML=5;
+        rightScore=5;
+        e("right-score").innerHTML=5;
+    }
     if(param==4){
         send("customImage=welcome");
     }
