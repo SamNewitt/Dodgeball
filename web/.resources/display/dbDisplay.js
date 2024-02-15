@@ -30,7 +30,7 @@ function message(type,data){
         break;
 
         case "customImage":
-            customImage(data);
+            customImage=data;
         break;
         
         case "brightness":
@@ -59,6 +59,7 @@ e("custom-image").style.opacity="0";
 setTimeout(function(){
     setLeftTeam(pendingLeftTeam);
     setRightTeam(pendingRightTeam);
+    customImageUpdate();
 switch(param){
     
 case "1":
@@ -188,6 +189,6 @@ function brightness(param){
     e("brightness-cover").style.opacity=(100-param)/100;
 }
 
-function customImage(param){
-    e("custom-image").setAttribute("src","../customImages/"+param+".jpg")
+function customImageUpdate(){
+    e("custom-image").setAttribute("src","../customImages/"+customImage+".jpg")
 }
