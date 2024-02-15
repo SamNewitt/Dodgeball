@@ -174,6 +174,7 @@ function screen(param){
         e("left-score").innerHTML=5;
         rightScore=5;
         e("right-score").innerHTML=5;
+        setTimeout(clockReset,500);
     }
     if(param==4){
         send("customImage=welcome");

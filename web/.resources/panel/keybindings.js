@@ -28,6 +28,13 @@ document.addEventListener("keyup",function(event){
             case "p":
                 dim();
             break;
+            case "m":
+                e("clock-input").focus();
+                e("clock-input").select();
+            break;
+            case " ":
+                clockToggle();
+            break;
 
             default:
             screen(parseInt(event.key));
